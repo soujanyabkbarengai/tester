@@ -36,7 +36,7 @@
         function createOutput(data){
             output.innerHTML='<div>Users</div>';
             data.forEach(element => {
-                console.log(element);
+                console.log(element,"hello");
                 const main =document.createElement('div');
                 const myInput =document.createElement('input');
                 myInput.setAttribute('type','text')
@@ -54,7 +54,7 @@
                     console.log('Delete action called');
                     fetch(endPoint,{
                 method: 'delete',
-                body: JSON.stringify(data),
+                body: JSON.stringify(element),
                 headers:{
                     'Content-Type': 'application/json'
                 }
