@@ -22,6 +22,7 @@ const client = new MongoClient(url, {
 })
 
 const User = client.db('people').collection('friends');
+//get users
 module.exports.getUsers = (req, res) => {
     logger.info('GET ALL USERS')
     User.find().toArray().then(results => {

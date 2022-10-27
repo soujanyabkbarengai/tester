@@ -74,7 +74,7 @@ describe('update the user data', function () {
   it('Should get the reponse from API Gateway with status 200', function (done) {
     chai
      .request(app)
-     .put('/user/:name')
+     .put('/users')
     
      .send({})
      .end(function(_err, res) {
@@ -132,9 +132,9 @@ describe('delete the user data', function () {
   it('Should get the reponse from API Gateway with status 200', function (done) {
     chai
      .request(app)
-     .delete('/user/:name')
+     .delete('/users')
     
-     .send({_id:"63428a97109f6f7478981ca4"})
+     .send({_id:"6342f4ab118ed10029af4e7f"})
      .end(function(_err, res) {
        expect(res).to.have.status(200);
        console.log(chalk.bgCyan.bold(" API Response "), res.body);
